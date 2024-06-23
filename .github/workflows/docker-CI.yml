@@ -19,6 +19,6 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: Build the Docker image
-      run: docker build -t themannu/project-nodejs-cicd-pipeline:$(date +%s) .
+      run: docker build -t themannu/project-nodejs-cicd-pipeline .
     - name: Push to Dockerhub
-      run: docker push themannu/project-nodejs-cicd-pipeline:$(date +%s) 
+      run: docker push themannu/project-nodejs-cicd-pipeline:latest
